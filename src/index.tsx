@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
+import AppProvider from './shared/context/ContextProvider.tsx';
 
 
 
@@ -10,7 +11,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App  />
+    <AppProvider>
+      <App  />
+    </AppProvider>
   </React.StrictMode>
 );
 
