@@ -7,14 +7,7 @@ import React, {
   } from "react";
 import CustomToast from "../layout/toast/CustomToast.tsx";
  
-  
-  interface ToastContextType {
-    showToast: (message: string, isSuccess: boolean) => void;
-    clearToast: () => void;
-    toastMessage: string | null;
-    isSuccessful: boolean | null;
-  }
-  
+
   const ToastContext = createContext<ToastContextType | undefined>(undefined);
   
   export const ToastProvider: React.FC<{ children: ReactNode }> = ({
